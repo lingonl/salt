@@ -104,7 +104,7 @@ def beacon(config):
         if 'onchangeonly' in config[service] and config[service]['onchangeonly'] is True:
             if service not in LAST_STATUS:
                 LAST_STATUS[service] = ret_dict[service]
-                if not service['emitatstartup']:
+                if not config['service']['emitatstartup']:
                     continue
                 else:
                     ret.append(ret_dict)
